@@ -1,0 +1,35 @@
+Todo
+>check for negative cycle.
+
+>calculte shortest path with at most 1 edge to shortest pth with at most v-1 edge.
+    >> most than v-1 edge implies that the shortest path has cycle in it.
+        : > v-1 edges = there exist a node that is being visited more than 1 time.
+
+procedure Bellman-Ford(G, l, s)
+Input: Directed Graph G = (V,E);
+        edge lengths {l:e is a member of E} with no negative cycles:
+        vertex s is a member of V
+
+
+for all u in V:
+    dist(u) = inf
+    prev(u) = nil
+
+dist(s) = 0
+repeat |V| -1 times:
+    for all e in E:
+        update(e)
+
+procedur update((u,v) in E):
+dist(v) = min{ dist(v), dist(u) + l(u,v)}
+
+Bellman-ford is not greedy
+> because all edges must be explore until Dijkstra that can stop when all node is explored
+    >> all node != all edges.
+
+Bellman-Ford is Dynamic programming
+> calculate shortest path in a bottom-up manner
+    > calculate shortest distance with at most 1 edge to shortest distancw
+        with at most n edge
+    > This works because number of edge in shortest path between two nodes
+        are at most V-1.

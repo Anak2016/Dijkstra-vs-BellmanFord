@@ -1,0 +1,56 @@
+def run_random1()
+    node_size = x
+    edge_node_ratio = y
+    dict_node_pair = {node_size1:[list of onde_size1], ..... ,node_sizeN:[list of node_sizeN] }
+
+    for n number of different node_size
+        edge_size = ratio * node_size
+
+        while edge_size > 0:
+
+            # generate random edge size for each nodes
+            rand_edge_size = generate random number from 1-5.
+
+            #if random number > edges_size set rand number to edge size
+            if rand_edge_size >= edge_size:
+                rand_edge_size = edge_size
+
+            generated_edge = 0
+            #generate rand_edge_pair of rand_edge_size
+            for j in range(1,rand_edge_size):
+                #generate rand_node_pair
+                node_pair = Generate_random_pair(i)
+
+                if node_pair:
+                    generated = generated + 1
+                #append node_pair to dict
+                dict_pair[node_size].append(node_pair)
+
+        edge_size = edge_size - generated_edge
+
+        node_size = x * 2
+
+
+    #generate random number from 0 to (node_size-1) and the number must not equal to i
+    def Generate_random_pair(current_node_index):
+        rand = generate random number between 0 to (node_size-1)
+        if rand == current_node_index:
+            Generate_random_pair(current_node_index)
+        else
+            return rand
+
+
+def run_random2()
+
+    num_edges = total_edgs * percentage / 100
+    for n in range(0, iteration):
+        for i in range(0,node_size-1):
+            for j in range(i+1, node_size-1):
+                edge_list.append((i,j))
+                edge_list.append((j,i))
+
+        edge_list = edge[:num_edges]
+        dict_ode_pair[node_size[ = edge_list
+
+        edge_list = []
+        node_size = node_size *2

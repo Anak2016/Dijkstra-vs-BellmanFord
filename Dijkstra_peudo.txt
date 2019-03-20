@@ -1,0 +1,24 @@
+Let distance of start vertex from start vertex = 0
+let distance of all otehr vertices from start = infinity
+
+Repeat
+	Visit the unvisited vertex with the smallest known distance from the start vertex. (if no edges edges, should we assign value = infinity or should we erase it from set of vertex to be search completely.)
+	For the current vertex, examine its unvisited neigbours.
+    For the current vertex, calculate distance of each neighbour from start vertex.
+	If the calculated distance of a vertex is less than the known distance, update the shortest distnace. 
+	Update the previous vertex for each of the updated distances.
+	Add the current vertex to the list of visited vertices.
+Until all vertices visited
+
+a->b  a->d d->b d->e e->b e->c b->c
+
+D = 304
+D = 290
+
+
+Dijkstra is greedy
+> Dijkstra stop when all nodes are explored
+    >> all nodes != all edges
+> Dijkstra assumes that edge cannot be negative. (added edge + path > path)
+> if actual_shortest_path_length > greedy shortest_path_length:
+    actual_shortest_path_length != greedy shortest_path_length

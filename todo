@@ -1,0 +1,77 @@
+==================================
+DATA FORMAT
+ {10 :[(l, r), ...], 20 :[(l, r), ...],...,160:[(l,r),...]}
+
+==================================
+RT RESULT
+
+Dijkstra_repeated_time_list
+{10: 0.01891469955444336, 20: 0.030916929244995117, 40: 0.054851531982421875, 80: 0.1077127456665039, 160: 0.20245814323425293}
+Bellman_Ford_repeated_time_list:
+{10: 0.017952680587768555, 20: 0.09527587890625, 40: 0.3041846752166748, 80: 1.2341270446777344, 160: 5.230584144592285}
+
+===========================
+== TODO LIST
+===========================
+> plot
+
+
+> run iteration in main_file
+    : this way we can feed in same data to both algorithm
+
+> Running trails: do m runs for each inputs value. (Fix this)
+    >>create method for repeating algorithm
+    >>Both algorithm must use the same dataset
+
+> find largest constant of theoritical runtime and plot it on to the graph
+
+> Do I need to code method to compute RT Averge
+
+> Implement all Algorithm with the same input.     ( Fix this)
+    : dijkstra and bellman_ford recompute new dataset in everyrun.
+    : dijkstra and bellman_ford does not use the same dataset for the same input size.
+    >> Should I save the set of different node_size to textfile, so that I can \
+    read the same "random data" and redo the analysis on the same dataset.
+
+> Value select in the report must math in implementation
+    : I specified value to be between 5 and 20. current I use 5 different input size.
+    : show her result and ask if 5 output is okay.
+
+Q: RT Analysis
+    : What does it mean "RT Analysis is fully clear and concise for all solutions."
+
+Q: Tables for computing C and graphs
+    : What is "computing c"
+
+Q: Conclusion
+    : What do i need to write for the conclusion?
+    : What does it mean be to clear and concise?
+
+Q: reference
+    : How do I do citation for reference?
+    : Show we follow any citation standard? if yes, which one is it?
+==============================
+=== PROBLEMS AND ERROR
+==============================
+>error with plotting graph in pychamr
+    >>pycharm
+        :can't download any new packages from pycharm
+            problem > in python3.7 cliner, pip is outdated (version = 10)
+                    > cannot update pip because ssl error (cannot use ssl channel)
+            solution> UNKNOWN
+
+            problem > pycharm cannot connect to conda
+            solution> run on pycharm with working console
+        :class not registered pycharm
+            problem  > console cannot find DDL
+            solution > run it on pycharm with working console
+        :access denied when plotting python igraph
+            problem  > console cannot find DDL
+            solution > run it on pycharm with working console
+    >>conda
+        :CondaHTTPError: HTTP 000 CONNECTION FAILED for url <https://repo.anaconda.com/pkgs/r/win-64/repodata.json.bz2>
+        problem  > pycharm cannot find DDLs.
+                    it confused pycharm's python.exe with  system's python.exe
+        solution > open pycharm from anaconda prompt
+>create a graph from igraph
+
